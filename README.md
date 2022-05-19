@@ -16,7 +16,7 @@
  
  ## Usage
  
- 1. Configure bot in `settings.json` file. [Configuration Reference](https://github.com/MrMiM-tfe/MrBot/wiki/Configuring-bot-(settings.json)))
+ 1. Configure bot in `settings.json` file. [Configuration Reference](https://github.com/MrMiM-tfe/MrBot/wiki/Configuring-bot-(settings.json))
  2. Start bot with `node .` command.
 
 ## Features
