@@ -1,0 +1,65 @@
+{
+  
+  "bot-account": {
+    "username": "MrMiMB",
+    "password": "",
+    "type": "mojang"
+  },
+
+  "server": {
+    "ip": "play.madcraft.ir",
+    "port": 25565,
+    "version": "1.16.5"
+  },
+
+  "position": {
+    "enabled": false,
+    "x": 5279,
+    "y": 120,
+    "z": 4168
+  },
+
+  "log": true,
+
+  "utils": {
+
+    "chatCommand": true,
+
+    "prem-acc":["MrMiM", "Parsa6969"],
+
+    "ignore-chats":[
+      "Member - Ping:",
+      "MC.MadGames.IR - Website: MadCraft.iR  |",
+      "0 |"
+    ],
+
+    "auto-auth": {
+      "enabled": true,
+      "password": "12345678"
+    },
+    
+    "auto-server-selcet": {
+      "enabled": true,
+      "serever-name": "survival"
+    },
+
+    "anti-afk": {
+      "enabled": false,
+      "sneak": false
+    },
+
+    "chat-messages": {
+      "enabled": false,
+      "repeat": false,
+      "repeat-delay": 3,
+
+      "messages": [
+        "salam"
+      ]
+    },
+
+    "chat-log": true,
+    "auto-reconnect": true,
+    "auto-reconnect-delay": 5000
+  }
+}
