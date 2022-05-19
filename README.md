@@ -1,13 +1,30 @@
 # MrBot
-install:
-install node.js
 
-run this command id cmd:
-npm install
+<p align="center">
+    Functional minecraft AFK bot for servers
+</p>
 
-use settings.json to config your bot
+<p align="center">
+    Auto-Auth, Microsoft/Mojang accounts support.
+</p>
 
-Run:
-node .
+## Installation
 
-Use :help to get commands
+ 1. [Download](https://github.com/urFate/Afk-Bot/tags) the latest package.
+ 2. Download & install [Node.JS](https://nodejs.org/en/download/)
+ 3. Run `npm install` command in bot directory.
+ 
+ ## Usage
+ 
+ 1. Configure bot in `settings.json` file. [Configuration Reference](https://github.com/MrMiM-tfe/MrBot/wiki/Configuring-bot-(settings.json)))
+ 2. Start bot with `node .` command.
+
+## Features
+
+ - Move to target block after join
+ - Mojang/Microsoft Account support
+ - Chat log
+ - Chat messages Module
+ - Auto reconnect
+ - Supported server versions: `1.8 - 1.18.2`
+ 
