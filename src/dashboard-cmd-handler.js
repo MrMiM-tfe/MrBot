@@ -5,11 +5,27 @@ const fallowPlayer = require("../lib/fallow-player")
 const lookAtNearPlayers = require("../lib/look-at-near-players")
 const logchat = require("../lib/log-chat")
 const LiveViewer = require("../lib/live-viewer")
+const lookAt = require("../lib/look-at")
+const equipSword = require("../lib/equip-sword")
 
 module.exports = function handle(bot) {
     // :attack command
-    bot.dashboard.commands['attack'] = (action, type, etype) => {
-        attackTo(action, type, etype, bot)
+    bot.dashboard.commands['attack'] = (action, type, etype, lookAt) => {
+        lookAt = false
+        if (lookAt == "on") {
+            lookAt = true
+        }
+        attackTo(action, type, etype, lookAt, bot)
+    }
+
+    // lookat command
+    bot.dashboard.commands['lookat'] = (type, etype) => {
+        lookAt(type, etype, bot)
+    }
+    
+    // sword command
+    bot.dashboard.commands['sword'] = () => {
+        equipSword(bot)
     }
 
     // :pvp command

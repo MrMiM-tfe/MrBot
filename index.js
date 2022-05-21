@@ -65,8 +65,11 @@ function createBot() {
             var password = config.utils['auto-auth'].password
             setTimeout(() => {
                 bot.chat(`/register ${password} ${password}`)
+            }, 1000)
+
+            setTimeout(() => {
                 bot.chat(`/login ${password}`)
-            }, 500)
+            }, 1000)
 
             setInfo("Authentification commands executed.")
         }
