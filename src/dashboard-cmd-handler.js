@@ -10,17 +10,17 @@ const equipSword = require("../lib/equip-sword")
 
 module.exports = function handle(bot) {
     // :attack command
-    bot.dashboard.commands['attack'] = (action, type, etype, lookAt) => {
+    bot.dashboard.commands['attack'] = (action, type, ename, lookAt) => {
         lookAt = false
         if (lookAt == "on") {
             lookAt = true
         }
-        attackTo(action, type, etype, lookAt, bot)
+        attackTo(action, type, ename, lookAt, bot)
     }
 
     // lookat command
-    bot.dashboard.commands['lookat'] = (type, etype) => {
-        lookAt(type, etype, bot)
+    bot.dashboard.commands['lookat'] = (type, ename) => {
+        lookAt(type, ename, bot)
     }
     
     // sword command
