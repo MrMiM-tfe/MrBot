@@ -3,7 +3,9 @@ const CMDhandle = require("./src/dashboard-cmd-handler")
 const mineflayer = require('mineflayer')
 const pvp = require('mineflayer-pvp').plugin
 var navigatePlugin = require('mineflayer-navigate')(mineflayer)
-const { pathfinder } = require('mineflayer-pathfinder')
+const {
+    pathfinder
+} = require('mineflayer-pathfinder')
 const autoeat = require("mineflayer-auto-eat")
 const config = require('./settings.json')
 const logchat = require('./lib/log-chat')
@@ -32,7 +34,7 @@ function createBot() {
 
     // put config file into bot
     bot.config = config
-    
+
     // load Plugins
     bot.loadPlugin(require('mineflayer-dashboard')({
         chatPattern: /^» \w+? » /
@@ -130,6 +132,13 @@ function createBot() {
                     bot.chat(cmd)
                 }
             })
+        }
+
+        if (config.utils['anti-afk'].enabled) {
+            bot.setControlState('jump', true);
+            if (config.utils['anti-afk'].sneak) {
+                bot.setControlState('sneak', true);
+            }
         }
 
     }) // end of (once spawn)
